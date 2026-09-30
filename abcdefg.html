@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menü — Win Win Cafe & Social Space</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFBF7',
+              bone: '#F7F3EC',
+              sand: '#EAE3D5',
+              dark: '#1C1A17',
+              charcoal: '#2D2924',
+              muted: '#7A7369',
+              terracotta: '#B65D38',
+              olive: '#4D5343'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FDFBF7;
+      color: #1C1A17;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection {
+      background-color: #B65D38;
+      color: #FDFBF7;
+    }
+    /* Özel Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #EAE3D5;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7A7369;
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-dark selection:bg-brand-terracotta selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- ================= ÜST BİLGİ & HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-brand-cream/90 backdrop-blur-md border-b border-brand-sand/70">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-2 group">
+        <span class="text-2xl lg:text-3xl font-serif font-bold tracking-tight text-brand-dark group-hover:text-brand-terracotta transition-colors">
+          WIN WIN
+        </span>
+        <span class="text-xs uppercase tracking-widest text-brand-muted font-medium border-l border-brand-sand pl-3 py-1">
+          Menü
+        </span>
+      </a>
+
+      <!-- Arama Inputu (Desktop) -->
+      <div class="hidden sm:flex items-center relative w-72">
+        <input 
+          type="text" 
+          id="menuSearch" 
+          placeholder="Kahve, tatlı veya atıştırmalık ara..." 
+          class="w-full text-xs font-medium bg-brand-bone border border-brand-sand rounded-full py-2.5 pl-9 pr-4 text-brand-dark placeholder-brand-muted focus:outline-none focus:border-brand-dark transition-all"
+        />
+        <svg class="w-3.5 h-3.5 text-brand-muted absolute left-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+
+      <!-- Bilgilendirme Rozeti -->
+      <div class="hidden md:flex items-center gap-3 text-xs text-brand-muted font-medium">
+        <span class="w-2 h-2 rounded-full bg-brand-olive animate-pulse"></span>
+        <span>Barista & Mutfak Açık</span>
+      </div>
+
+      <!-- Geri Dön Butonu -->
+      <a href="index.html" class="sm:hidden text-xs font-semibold uppercase tracking-wider text-brand-charcoal hover:text-brand-terracotta">
+        Ana Sayfa
+      </a>
+    </div>
+
+    <!-- Mobil Arama Alanı -->
+    <div class="sm:hidden px-6 pb-4">
+      <div class="relative w-full">
+        <input 
+          type="text" 
+          id="menuSearchMobile" 
+          placeholder="Ürün ara (V60, Kruvasan...)" 
+          class="w-full text-xs font-medium bg-brand-bone border border-brand-sand rounded-full py-2 pl-9 pr-4 text-brand-dark placeholder-brand-muted focus:outline-none focus:border-brand-dark transition-all"
+        />
+        <svg class="w-3.5 h-3.5 text-brand-muted absolute left-3 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MENÜ HERO BAŞLIK ================= -->
+  <section class="pt-12 pb-8 border-b border-brand-sand/50 bg-brand-bone/50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center space-y-3">
+      <span class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">Nitelikli Lezzet Seçkisi</span>
+      <h1 class="text-4xl sm:text-5xl font-serif font-light text-brand-dark">Taze Çekirdekler & Günlük Tatlar</h1>
+      <p class="text-sm text-brand-muted max-w-xl mx-auto font-light leading-relaxed">
+        Single-origin nitelikli çekirdeklerle hazırlanan taze demlemeler, artisan fırın ürünleri ve canlandırıcı mocktail'ler.
+      </p>
+    </div>
+
+    <!-- Kategori Filtre Butonları (Yatay Scroll edilebilir) -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-8">
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none justify-start md:justify-center" id="categoryFilterBar">
+        <button class="cat-filter-btn active whitespace-nowrap px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-brand-dark text-brand-cream" data-category="all">
+          Tüm Menü
+        </button>
+        <button class="cat-filter-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all bg-brand-cream border border-brand-sand text-brand-charcoal hover:border-brand-dark" data-category="brew">
+          Demleme & 3. Nesil
+        </button>
+        <button class="cat-filter-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all bg-brand-cream border border-brand-sand text-brand-charcoal hover:border-brand-dark" data-category="espresso">
+          Espresso Bar
+        </button>
+        <button class="cat-filter-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all bg-brand-cream border border-brand-sand text-brand-charcoal hover:border-brand-dark" data-category="bakery">
+          Fırın & Tatlı
+        </button>
+        <button class="cat-filter-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all bg-brand-cream border border-brand-sand text-brand-charcoal hover:border-brand-dark" data-category="savory">
+          Tost & Kahvaltı
+        </button>
+        <button class="cat-filter-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all bg-brand-cream border border-brand-sand text-brand-charcoal hover:border-brand-dark" data-category="cold">
+          Mocktail & Soğuklar
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MENÜ LİSTESİ ================= -->
+  <main class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex-grow w-full">
+    
+    <!-- Filtre veya Arama Sonucu Bulunamadı Uyarısı -->
+    <div id="noResults" class="hidden py-20 text-center space-y-3">
+      <p class="font-serif text-2xl text-brand-dark">Aradığınız kriterlere uygun ürün bulunamadı.</p>
+      <p class="text-xs text-brand-muted">Lütfen arama terimini değiştirin veya farklı bir kategori seçin.</p>
+    </div>
+
+    <!-- Menü Grid Yapısı (PC'de 2 Geniş Kolon, Mobilde Tek) -->
+    <div id="menuGrid" class="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-10">
+
+      <!-- ITEM 1 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="brew" data-keywords="v60 single origin etiyopya filtre filtre kahve demleme chemex">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">V60 Single Origin</h3>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-brand-olive/15 text-brand-olive">İmza</span>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Etiyopya Yirgacheffe çekirdekleri. Şeftali, yasemin ve narenciye notalı dengeli gövde.</p>
+          <div class="text-[11px] text-brand-muted/80 pt-1">Demleme Süresi: ~4 dk</div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">120 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 2 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="brew" data-keywords="aeropress kolombiya guatemala demleme 3. nesil filtre">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Aeropress Huila</h3>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Kolombiya Huila çekirdekleri. Kırmızı elma ve esmer şeker tatlılığında pürüzsüz fincan.</p>
+          <div class="text-[11px] text-brand-muted/80 pt-1">Demleme Süresi: ~2.5 dk</div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">115 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 3 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="espresso" data-keywords="flat white espresso sut kahve latte">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Flat White</h3>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-brand-terracotta/15 text-brand-terracotta">Favori</span>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Çift shot ristretto espresso üzerine ipeksi mikro köpüklü taze süt.</p>
+          <div class="text-[11px] text-brand-muted/80 pt-1">Alternatif: Yulaf & Badem Sütü (+15 ₺)</div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">105 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 4 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="espresso" data-keywords="cortado ispanyol espresso sert sut">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Cortado</h3>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Eşit oranda yoğun espresso ve ılık kıvamlı süt, cam bardakta servis.</p>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">95 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 5 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="espresso" data-keywords="cold brew soguk kahve 24 saat demleme buzlu">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">24h Cold Brew</h3>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-brand-charcoal/10 text-brand-charcoal">Soğuk</span>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">24 saat boyunca damla damla demlenen düşük asiditeli, yüksek kafeinli soğuk kahve.</p>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">115 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 6 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="bakery" data-keywords="san sebastian cheesecake tatli cikolata peynir">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">San Sebastian Cheesecake</h3>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-brand-terracotta/15 text-brand-terracotta">Şefin Tarifi</span>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">İçi akışkan, karamelize kabuklu orijinal İspanyol reçetesi. Sıcak eritilmiş Belçika çikolatası ile.</p>
+          <div class="text-[11px] text-brand-muted/80 pt-1">Glütensiz Seçenek Mevcut</div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">160 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 7 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="bakery" data-keywords="kruvasan fransiz tereyagli tatli firin">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Fransız Tereyağlı Kruvasan</h3>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">%100 gerçek tereyağı ile 72 saatlik soğuk fermantasyon. İçi gözenekli, dışı çıtır.</p>
+          <div class="text-[11px] text-brand-muted/80 pt-1">Her sabah 08:30 ve 14:00'te fırından çıkar.</div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">95 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 8 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="bakery" data-keywords="brownie lotus karamel cikolata tatli">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Lotus Biscoff Brownie</h3>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Koyu çikolatalı ıslak doku, Lotus ezmesi ve çıtır bisküvi parçaları ile ılık servis.</p>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">130 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 9 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="savory" data-keywords="tost fume kaburga cheddar eksi mayali sandvic kahvalti">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Füme Kaburga & Cheddar Tost</h3>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-brand-olive/15 text-brand-olive">Doyurucu</span>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Taş fırın ekşi mayalı ekmek, 6 aylık olgun cheddar, dana kaburga füme ve karamelize soğan.</p>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">175 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 10 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="savory" data-keywords="avokado kruvasan ezine sandvic hafif kahvalti">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Avokadolu Kruvasan Sandviç</h3>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Taze fırın kruvasan içerisinde ezilmiş Akdeniz avokadosu, Ezine peyniri, ceviz ve taze kekik.</p>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">165 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 11 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="cold" data-keywords="mocktail mersin narenciye tonik ferahlatici soguk portakal limon">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Mersin Narenciye Fizz</h3>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-brand-charcoal/10 text-brand-charcoal">Alkolsüz</span>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Mersin portakalı, taze sıkılmış lime suyu, nane yaprakları ve premium Akdeniz toniği.</p>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">110 ₺</span>
+        </div>
+      </article>
+
+      <!-- ITEM 12 -->
+      <article class="menu-item group pb-6 border-b border-brand-sand/60 flex justify-between items-start gap-4 transition-all" data-category="cold" data-keywords="matcha latte japon yesil cay buzlu sut">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-medium text-brand-dark group-hover:text-brand-terracotta transition-colors">Iced Ceremonial Matcha Latte</h3>
+          </div>
+          <p class="text-xs text-brand-muted font-light leading-relaxed max-w-sm">Uji menşeili Japon seremoniyel matcha tozu, yulaf sütü ve hafif vanilya dokunuşu.</p>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="font-serif text-xl font-semibold text-brand-dark">135 ₺</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Menü Alt Notu & Süt Alternatifleri -->
+    <div class="mt-16 pt-8 border-t border-brand-sand/70 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-brand-muted">
+      <div class="p-4 rounded-xl bg-brand-bone/60 border border-brand-sand/60">
+        <strong class="block text-brand-dark mb-1 font-semibold uppercase tracking-wider text-[11px]">Süt Alternatifleri</strong>
+        İçeceklerinizde isteğe bağlı olarak Laktozsuz, Yulaf, Soya ve Badem sütü seçenekleri sunulmaktadır.
+      </div>
+      <div class="p-4 rounded-xl bg-brand-bone/60 border border-brand-sand/60">
+        <strong class="block text-brand-dark mb-1 font-semibold uppercase tracking-wider text-[11px]">Alerjen Uyarısı</strong>
+        Ürünlerimiz fındık, ceviz, laktoz ve gluten içerebilir. Alerjiniz varsa lütfen baristamıza bildiriniz.
+      </div>
+      <div class="p-4 rounded-xl bg-brand-bone/60 border border-brand-sand/60">
+        <strong class="block text-brand-dark mb-1 font-semibold uppercase tracking-wider text-[11px]">Çekirdek Satışı</strong>
+        Beğendiğiniz single-origin çekirdekleri paket halinde veya ev demleme ekipmanınıza göre öğüterek satın alabilirsiniz.
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-cream border-t border-brand-sand py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-brand-muted">
+      <div>
+        <span class="font-serif font-bold text-brand-dark text-base mr-2">WIN WIN</span>
+        Üniversite Caddesi, No: 42/A Çiftlikköy / Mersin
+      </div>
+      <div>
+        Fiyatlarımıza tüm vergiler dahildir. © 2026 Win Win Cafe.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= ETKİLEŞİM SCRIPT'LERİ ================= -->
+  <script>
+    const filterButtons = document.querySelectorAll('.cat-filter-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const noResults = document.getElementById('noResults');
+    const searchInputs = [document.getElementById('menuSearch'), document.getElementById('menuSearchMobile')];
+
+    let currentCategory = 'all';
+    let searchQuery = '';
+
+    // Filtreleme Fonksiyonu
+    function filterMenu() {
+      let visibleCount = 0;
+
+      menuItems.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        const itemKeywords = (item.getAttribute('data-keywords') + ' ' + item.innerText).toLowerCase();
+
+        const matchesCategory = (currentCategory === 'all' || itemCat === currentCategory);
+        const matchesSearch = itemKeywords.includes(searchQuery);
+
+        if (matchesCategory && matchesSearch) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    // Kategori buton tıklama dinleyicileri
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-brand-dark', 'text-brand-cream');
+          b.classList.add('bg-brand-cream', 'border', 'border-brand-sand', 'text-brand-charcoal');
+        });
+
+        btn.classList.add('active', 'bg-brand-dark', 'text-brand-cream');
+        btn.classList.remove('bg-brand-cream', 'border', 'border-brand-sand', 'text-brand-charcoal');
+
+        currentCategory = btn.getAttribute('data-category');
+        filterMenu();
+      });
+    });
+
+    // Arama dinleyicileri (Desktop + Mobil senkron)
+    searchInputs.forEach(input => {
+      if (!input) return;
+      input.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        // İki inputu senkronize tut
+        searchInputs.forEach(otherInput => {
+          if (otherInput && otherInput !== input) {
+            otherInput.value = e.target.value;
+          }
+        });
+        filterMenu();
+      });
+    });
+  </script>
+</body>
+</html>
