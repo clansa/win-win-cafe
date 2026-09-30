@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Win Win Cafe & Social Space — Üniversite Caddesi</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FDFBF7',
+              bone: '#F7F3EC',
+              sand: '#EAE3D5',
+              dark: '#1C1A17',
+              charcoal: '#2D2924',
+              muted: '#7A7369',
+              terracotta: '#B65D38',
+              olive: '#4D5343'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FDFBF7;
+      color: #1C1A17;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection {
+      background-color: #B65D38;
+      color: #FDFBF7;
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-dark selection:bg-brand-terracotta selection:text-white">
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-sand/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      
+      <div class="flex items-center gap-2">
+        <a href="#" class="text-2xl lg:text-3xl font-serif font-bold tracking-tight text-brand-dark">
+          WIN WIN<span class="text-brand-terracotta font-serif font-normal italic text-lg ml-2">social space</span>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-10 text-xs font-semibold uppercase tracking-widest text-brand-charcoal">
+        <a href="#hakkimizda" class="hover:text-brand-terracotta transition-colors">Hikayemiz</a>
+        <a href="#alanlar" class="hover:text-brand-terracotta transition-colors">Atmosfer</a>
+        <a href="#menu" class="hover:text-brand-terracotta transition-colors">Menü Vitrini</a>
+        <a href="#iletisim" class="hover:text-brand-terracotta transition-colors">Ulaşım & İletişim</a>
+      </nav>
+
+      <!-- CTA Action -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#iletisim" class="px-5 py-2.5 rounded-full border border-brand-charcoal text-xs font-medium uppercase tracking-wider hover:bg-brand-charcoal hover:text-white transition-all">
+          Yol Tarifi Al
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" aria-label="Menüyü Aç" class="md:hidden text-brand-dark focus:outline-none p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pt-4 pb-6 bg-brand-bone border-b border-brand-sand">
+      <div class="flex flex-col space-y-4 text-sm font-medium tracking-wide">
+        <a href="#hakkimizda" class="py-1 border-b border-brand-sand/40 hover:text-brand-terracotta transition-colors">Hikayemiz</a>
+        <a href="#alanlar" class="py-1 border-b border-brand-sand/40 hover:text-brand-terracotta transition-colors">Atmosfer</a>
+        <a href="#menu" class="py-1 border-b border-brand-sand/40 hover:text-brand-terracotta transition-colors">Menü Vitrini</a>
+        <a href="#iletisim" class="py-1 hover:text-brand-terracotta transition-colors">Ulaşım & İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO BÖLÜMÜ ================= -->
+    <section class="relative pt-12 pb-20 lg:py-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-brand-bone border border-brand-sand">
+              <span class="w-2 h-2 rounded-full bg-brand-olive animate-pulse"></span>
+              <span class="text-xs uppercase tracking-widest text-brand-muted font-semibold">Üniversite Caddesi, Mersin</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-light text-brand-dark leading-[1.15]">
+              Yavaş kahve, rahat çalışma masaları ve <span class="italic font-normal text-brand-terracotta">iyi anlar.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-brand-muted font-light max-w-xl leading-relaxed">
+              Üniversite temposu içinde nefes alabileceğin sakin bir sığınak. Özenle demlenmiş nitelikli çekirdekler, ergonomik oturma alanları ve gün boyu süren ilham verici atmosfer.
+            </p>
+
+            <div class="pt-4 flex flex-wrap gap-4 items-center">
+              <a href="#menu" class="px-8 py-4 rounded-full bg-brand-dark text-brand-cream text-xs font-semibold uppercase tracking-widest hover:bg-brand-charcoal transition-all">
+                Seçkilerimizi İnceleyin
+              </a>
+              <a href="#alanlar" class="px-8 py-4 rounded-full border border-brand-sand text-brand-charcoal text-xs font-semibold uppercase tracking-widest hover:border-brand-dark transition-all">
+                Mekan Keşfi
+              </a>
+            </div>
+
+            <div class="pt-8 border-t border-brand-sand grid grid-cols-3 gap-6 text-left">
+              <div>
+                <span class="block text-2xl font-serif text-brand-dark">1000 Mbps</span>
+                <span class="text-xs text-brand-muted">Kesintisiz Fiber Altyapı</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-serif text-brand-dark">Her Masada</span>
+                <span class="text-xs text-brand-muted">Geniş Priz Alanı</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-serif text-brand-dark">08:30 — 01:00</span>
+                <span class="text-xs text-brand-muted">Haftanın Her Günü</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative">
+            <div class="relative z-10 overflow-hidden rounded-2xl shadow-xl bg-brand-bone aspect-[4/5]">
+              <img 
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" 
+                alt="Win Win Cafe Aydınlık İç Mekan" 
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            <!-- Arka Fon Süslemesi -->
+            <div class="absolute -bottom-6 -right-6 w-full h-full border border-brand-sand rounded-2xl -z-0"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HİKAYE / FELSEFE ================= -->
+    <section id="hakkimizda" class="py-20 lg:py-28 bg-brand-bone border-y border-brand-sand/60">
+      <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-8">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">Felsefemiz</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-brand-dark leading-snug">
+          "Hem çalışabileceğin kadar düzenli, hem kafa dinleyebileceğin kadar samimi."
+        </h2>
+        <p class="text-base sm:text-lg text-brand-muted max-w-2xl mx-auto font-light leading-relaxed">
+          Gürültülü, karmaşık mekanların aksine Win Win; projelerini rahatça yetiştirebileceğin ergonomik köşeleri, lezzetli 3. nesil demlemeleri ve taze fırın tatlarıyla Üniversite Caddesi'nde kendine vakit ayırman için tasarlandı.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 text-left">
+          <div class="p-8 rounded-xl bg-brand-cream border border-brand-sand/80">
+            <div class="text-xs font-semibold text-brand-olive tracking-widest uppercase mb-3">01 / Nitelikli Çekirdek</div>
+            <h3 class="text-xl font-serif font-medium text-brand-dark mb-2">Özenli Demlemeler</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">Single origin kahve çekirdekleri, hassas tartım ve damak tadına uygun hazırlanan V60, Chemex ve Aeropress seçenekleri.</p>
+          </div>
+
+          <div class="p-8 rounded-xl bg-brand-cream border border-brand-sand/80">
+            <div class="text-xs font-semibold text-brand-terracotta tracking-widest uppercase mb-3">02 / Çalışma Konforu</div>
+            <h3 class="text-xl font-serif font-medium text-brand-dark mb-2">Çalışma Dostu Dizayn</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">Gözü yormayan sıcak aydınlatmalar, ergonomik ahşap sandalyeler ve her köşede kolay erişilebilir priz panelleri.</p>
+          </div>
+
+          <div class="p-8 rounded-xl bg-brand-cream border border-brand-sand/80">
+            <div class="text-xs font-semibold text-brand-charcoal tracking-widest uppercase mb-3">03 / Artisan Fırın</div>
+            <h3 class="text-xl font-serif font-medium text-brand-dark mb-2">Günlük Taze Lezzetler</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">Katkısız artisan kruvasanlar, San Sebastian cheesecake ve gün boyu taze kalan hafif atıştırmalıklar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MEKAN ALANLARI ================= -->
+    <section id="alanlar" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">Atmosfer</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-light text-brand-dark mt-2">Win Win Yaşam Alanları</h2>
+          </div>
+          <p class="text-sm sm:text-base text-brand-muted max-w-md font-light">
+            Günün moduna göre seçim yapabileceğin, farklı hisler için kurgulanmış özel köşeler.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="group">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-bone mb-5 relative">
+              <img 
+                src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" 
+                alt="Sessiz Odak Alanı" 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <h3 class="text-xl font-serif font-medium text-brand-dark">Sessiz Odak & Çalışma Masaları</h3>
+            <p class="text-sm text-brand-muted mt-2 leading-relaxed font-light">Laptopla çalışmak, ders çalışmak veya kitap okumak için ayrılmış izole ve sessiz iç salon.</p>
+          </div>
+
+          <div class="group">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-bone mb-5 relative">
+              <img 
+                src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80" 
+                alt="Cadde Terası" 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <h3 class="text-xl font-serif font-medium text-brand-dark">Açık Hava Cadde Terası</h3>
+            <p class="text-sm text-brand-muted mt-2 leading-relaxed font-light">Üniversite Caddesi'nin enerjisini hissedebileceğin, ferah ve yeşilliklerle çevrili teras.</p>
+          </div>
+
+          <div class="group">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-bone mb-5 relative">
+              <img 
+                src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80" 
+                alt="Sohbet ve Lounge Köşesi" 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <h3 class="text-xl font-serif font-medium text-brand-dark">Lounge & Sosyal Alan</h3>
+            <p class="text-sm text-brand-muted mt-2 leading-relaxed font-light">Grup sohbetleri, kutu oyunları veya keyifli bir kahve molası için tasarlanmış geniş koltuklar.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MENÜ VİTRİNİ ================= -->
+    <section id="menu" class="py-20 lg:py-28 bg-brand-bone border-t border-brand-sand/60">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">Seçkiler</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-light text-brand-dark mt-2">Öne Çıkan Menümüz</h2>
+          <p class="text-sm text-brand-muted mt-3 font-light">Sezonun en iyi çekirdekleri ve taze malzemeleriyle hazırlanan lezzetlerden küçük bir önizleme.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          
+          <!-- Kategori: Nitelikli Kahve -->
+          <div>
+            <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-charcoal pb-4 border-b border-brand-sand">3. Nesil Kahveler</h3>
+            <div class="divide-y divide-brand-sand/50">
+              
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">V60 Single Origin</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Etiyopya Yirgacheffe / Çiçeksi & Bergamot Notaları</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">120 ₺</span>
+              </div>
+
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Flat White</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Çift shot espresso & mikro köpüklü ipeksi süt</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">105 ₺</span>
+              </div>
+
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Cold Brew (24 Saat Demleme)</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Düşük asidite, yoğun gövdeli ferahlatıcı lezzet</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">115 ₺</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Kategori: Fırın & Tatlı -->
+          <div>
+            <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-charcoal pb-4 border-b border-brand-sand">Fırın & Tatlı</h3>
+            <div class="divide-y divide-brand-sand/50">
+              
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">San Sebastian Cheesecake</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Akışkan kıvam, Belçika çikolatası sosu ile</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">160 ₺</span>
+              </div>
+
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Fransız Tereyağlı Kruvasan</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Fırından taze, çıtır çıtır katmanlar</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">95 ₺</span>
+              </div>
+
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Lotus & Karamel Brownie</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Yoğun kakaolu, hafif ılık servis</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">130 ₺</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Kategori: Ferahlatıcılar -->
+          <div>
+            <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-charcoal pb-4 border-b border-brand-sand">Mocktail & Soğuklar</h3>
+            <div class="divide-y divide-brand-sand/50">
+              
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Mersin Narenciye Fizz</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Taze portakal, misket limonu, nane ve tonik</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">110 ₺</span>
+              </div>
+
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Hibiscus Iced Tea</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Demlenmiş hatmi çiçeği, kırmızı orman meyveleri</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">100 ₺</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Kategori: Tuzlu & Atıştırmalık -->
+          <div>
+            <h3 class="text-xs font-semibold uppercase tracking-widest text-brand-charcoal pb-4 border-b border-brand-sand">Atıştırmalık & Toast</h3>
+            <div class="divide-y divide-brand-sand/50">
+              
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Füme Kaburga & Cheddar Tost</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Ekşi mayalı ekmek, karamelize soğan sosu ile</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">175 ₺</span>
+              </div>
+
+              <div class="py-4 flex justify-between items-baseline">
+                <div>
+                  <h4 class="font-serif text-lg text-brand-dark">Avokado & Ezine Kruvasan Sandviç</h4>
+                  <p class="text-xs text-brand-muted mt-0.5">Taze yeşillikler, kurutulmuş domates</p>
+                </div>
+                <span class="font-serif text-base text-brand-charcoal ml-4">165 ₺</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-14">
+          <p class="text-xs text-brand-muted italic">Mekanımızda tüm sütlü kahveler badem, soya veya yulaf sütü alternatifiyle hazırlanabilmektedir.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= İLETİŞİM & KONUM ================= -->
+    <section id="iletisim" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="bg-brand-bone rounded-3xl border border-brand-sand p-8 lg:p-14 overflow-hidden relative">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="space-y-6">
+              <span class="text-xs font-semibold uppercase tracking-widest text-brand-terracotta">Bizi Ziyaret Edin</span>
+              <h2 class="text-3xl sm:text-4xl font-serif font-light text-brand-dark">Mersin Üniversite Caddesi'ndeyiz.</h2>
+              <p class="text-base text-brand-muted font-light leading-relaxed">
+                Kampüs yolu üzerinde, merkezi ve kolay ulaşılabilir bir noktadayız. İster ders aralarında kısa bir mola, ister tüm gün sürecek sakin bir çalışma seansı için bekliyoruz.
+              </p>
+
+              <div class="space-y-4 pt-4 text-sm text-brand-charcoal">
+                <div class="flex items-start gap-4">
+                  <div class="w-6 h-6 rounded-full bg-brand-cream border border-brand-sand flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5 text-brand-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  </div>
+                  <div>
+                    <strong class="block font-medium text-brand-dark">Adres:</strong>
+                    Üniversite Caddesi, No: 42/A, Çiftlikköy Mah. Yenişehir / Mersin
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-6 h-6 rounded-full bg-brand-cream border border-brand-sand flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5 text-brand-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  </div>
+                  <div>
+                    <strong class="block font-medium text-brand-dark">Çalışma Saatleri:</strong>
+                    Pazartesi — Pazar: 08:30 — 01:00
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-6 h-6 rounded-full bg-brand-cream border border-brand-sand flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5 text-brand-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <div>
+                    <strong class="block font-medium text-brand-dark">Özellikler:</strong>
+                    Pati Dostu Mekan (Pet-Friendly), Hızlı Wi-Fi, Sigara İçilebilir Teras
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 flex flex-wrap gap-4">
+                <a 
+                  href="https://maps.google.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-dark text-brand-cream text-xs font-semibold uppercase tracking-wider hover:bg-brand-charcoal transition-all"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                  Google Haritalar'da Aç
+                </a>
+                <a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-sand text-brand-charcoal text-xs font-semibold uppercase tracking-wider hover:border-brand-dark transition-all"
+                >
+                  Instagram @winwincafe
+                </a>
+              </div>
+            </div>
+
+            <!-- Sade Harita / Konum Kartı Görseli -->
+            <div class="rounded-2xl overflow-hidden border border-brand-sand bg-brand-cream h-[320px] lg:h-[380px] relative shadow-sm">
+              <iframe 
+                title="Win Win Cafe Konum"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12774.20849202796!2d34.5245!3d36.7865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d873836371cb21%3A0x6b772c114389025c!2sMersin%20%C3%9Cniversitesi%20%C3%87iftlikk%C3%B6y%20Kamp%C3%BCs%C3%BC!5e0!3m2!1str!2str!4v1700000000000" 
+                class="w-full h-full border-0 grayscale-[20%] contrast-[1.05]" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-cream border-t border-brand-sand py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div>
+        <div class="font-serif font-bold text-xl tracking-tight text-brand-dark">WIN WIN</div>
+        <p class="text-xs text-brand-muted mt-1 font-light">Üniversite Caddesi, Mersin — Sosyal Çalışma & Kahve Alanı</p>
+      </div>
+
+      <div class="text-xs text-brand-muted font-light">
+        © 2026 Win Win Cafe. Tüm hakları saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script: Basit Mobil Menü Etkileşimi -->
+  <script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
